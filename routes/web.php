@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function (){
-    return view('welcome');
+    return view('welcome'); 
 });
 
-Route::get('/recetas', 'RecetaController');
+Route::get('/recetas', 'RecetaController@index')->name('recetas.index');
+Route::get('/recetas/create', 'RecetaController@create')->name('recetas.create');
+Route::post('/recetas', 'RecetaController@store')->name('recetas.store');
 
 Auth::routes();
 
