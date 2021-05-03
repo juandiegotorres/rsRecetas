@@ -13,7 +13,12 @@
     <h2 class="text-center mb-2">Editar Receta: {{$receta->titulo}}</h2>
     <div class="row justify-content-center mt-5">
         <div class="col-md-8">
-            <form method="POST" action="{{ route('recetas.update', ['receta' => $receta->id]) }}" enctype="multipart/form-data" novalidate>
+            <form 
+                method="POST" 
+                action="{{ route('recetas.update', ['receta' => $receta->id]) }}" 
+                enctype="multipart/form-data" 
+                novalidate
+            >
                 @csrf
                 @method('PUT')
                 <div class="form-group">
@@ -94,10 +99,13 @@
                     </span>
                  @enderror
                 </div>
-                <actualizar-receta
+                {{-- <actualizar-receta
                     receta-id={{$receta->id}}
                 >
-                </actualizar-receta>
+                </actualizar-receta> --}}
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="Actualizar receta">
+                </div>
             </form>
         </div>
     </div>

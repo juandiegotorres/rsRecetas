@@ -61,6 +61,15 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('recetas.index') }}">
+                                        {{ __('Mis recetas') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('perfiles.show', ['perfil' => Auth::user()->id]) }}">
+                                        {{ __('Ver perfil') }}
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('perfiles.edit', ['perfil' => Auth::user()->id]) }}">
+                                        {{ __('Editar perfil') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -79,7 +88,7 @@
         </nav>
         <div class="container">
             <div class="row">
-                <div class="py-4 mt-5 col-12">
+                <div class="py-4 mt-5 col-12 justify-content-center d-flex">
                     @yield('botones')
                 </div>
 

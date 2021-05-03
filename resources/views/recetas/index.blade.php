@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('botones')
-  <a href="{{ route('recetas.create') }}" class="btn btn-primary mr-2 text-white">Nueva Receta</a>
+    @include('ui.navegacion')
 @endsection
 
 @section('content')
@@ -38,23 +38,22 @@
                                 <i class="fa fa-pencil"></i>
                             </button>
                         </a>
-                        <div class="form-group">
+
+                        <eliminar-receta receta-id="{{ $receta->id }}"></eliminar-receta>
+                        {{-- <div class="form-group">
                             <input type="submit" class="btn btn-primary" value="Actualizar Receta">
-                        </div>
+                        </div> --}}
                             
-                        </div>
-                        
-                        
-                            
-                            
-                            
-                        
-                        
+                        </div>                   
                      </td>
                  </tr>
                  @endforeach
              </tbody>
          </table>
+         <div class="col-12 mt-4 d-flex justify-content-center">
+            {{$recetas->links()}}
+         </div>
+         
     </div>
 
 @endsection
