@@ -35,5 +35,18 @@
                 {!! $receta->preparacion !!}
             </div>
         </div>
+         
+            <like-button
+                receta-id="{{ $receta->id }}"
+                like = "{{$like}}"
+                likes = "{{$likes}}"
+            ></like-button>
+            {{-- @if($likes>1)
+                <h4 class="text-center">A {{$likes}} personas les gusta esta receta</h4>
+            @else
+                <h4 class="text-center">A {{$likes}} persona le gusta esta receta</h4>
+            @endif --}}
+            
     </article>
+
 @endsection

@@ -53,7 +53,21 @@
          <div class="col-12 mt-4 d-flex justify-content-center">
             {{$recetas->links()}}
          </div>
-         
+         @if(count($likes) > 0)
+         <h2 class="text-center my-5">Recetas que te gustan</h2>
+         <div class="col-md-10 mx-auto bg-white p-3">
+             <ul class="list-group">
+                 @foreach ($likes as $like)
+                     <li class="list-group-item d-flex justify-content-between align-items-center">
+                         <p>{{$like->titulo}}</p>
+                         <a class="btn btn-outline-success text-uppercase font-weight-bold" href="{{route('recetas.show', ['receta' => $like->id])}}">Ver</a>
+                     </li>
+                 @endforeach
+             </ul>
+         </div>
+         @else
+            <p class="text-center">Aún no tienes recetas guardadas <br><small>Dale me gusta a y aparecerán aquí</small></p>
+         @endif
     </div>
 
 @endsection

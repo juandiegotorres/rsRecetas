@@ -12,17 +12,21 @@ class Receta extends Model
     ];
 
     //Obtiene la categoria de la receta con clave foranea
-    public function categoria() 
+    public function categoria()
     {
         return $this->belongsTo(CategoriaReceta::class);
     }
-  
+
     //Obtiene la informacion del usuario con clave foranea
 
-    public function autor() 
+    public function autor()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
 
-
+    //Likes que ha recibido una receta con
+    public function likes()
+    {
+        return $this->belongsToMany(User::class, 'likes_receta');
+    }
 }

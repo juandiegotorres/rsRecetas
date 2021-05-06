@@ -28,10 +28,12 @@
                             <img class="card-img-top" src="/storage/{{$receta->imagen}}" alt="Imagen Receta">
                             <div class="card-body d-flex flex-column ">
                                 <h5 class="card-title d-flex mb-3 justify-content-center text-center">{{$receta->titulo}}</h5>
-                                <button class="align-self-end btn btn-lg btn-block btn-primary" style="margin-top: auto!important;">
+                               
+                                <a class="align-self-end btn btn-lg btn-block btn-primary" style="margin-top: auto!important;" href="{{ route('recetas.show', ['receta' => $receta->id])}}" target="_blank">Ver Receta </a>
+                                {{-- <button class="align-self-end btn btn-lg btn-block btn-primary" style="margin-top: auto!important;">
                                     <a href="{{ route('recetas.show', ['receta' => $receta->id])}}" target="_blank"></a>
                                     Ver Receta
-                                </button>
+                                </button> --}}
                                 
                             </div>
                         </div>

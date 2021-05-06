@@ -10944,6 +10944,7 @@ a.text-dark:focus {
 
 body {
   font-family: "Open Sans", sans-serif;
+  background-color: #eee;
 }
 
 trix-editor {
@@ -10954,8 +10955,10 @@ trix-editor {
 .bg-primary .navbar-brand {
   color: white;
   font-family: "Manrope", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 2rem;
+  color: #fff !important;
+  font-size: 2.4rem;
+  text-decoration: none;
 }
 
 .bg-primary .navbar-brand:hover {
@@ -10963,8 +10966,151 @@ trix-editor {
 }
 
 .icono {
-  display: block;
+  width: 16px;
+}
+
+.barra {
+  background-color: #ed4646 !important;
+}
+
+.fecha {
+  color: #ed4646 !important;
+}
+
+.receta-meta p {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.titulo-categoria {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #ed4646 !important;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  padding-right: 2rem;
+}
+
+.btn-receta,
+.btn-receta:hover {
+  background-color: #ed4646 !important;
+  border: none;
+}
+
+.owl-carousel .owl-stage {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex: 1 0 auto;
+  height: 100%;
+}
+
+.card-body {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.categorias-bg {
+  background-color: #fff;
+}
+
+.categorias-bg .nav-link {
+  color: #222 !important;
+  display: inline-block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  font-size: 1.2rem !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.categorias-bg .nav-link:before,
+.categorias-bg .nav-link:after {
+  content: "";
+  position: absolute;
+  transition: transform 0.5s ease;
+}
+
+.categorias-bg .nav-link:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #ed4646;
+  transform: translateX(-100%);
+}
+
+.categorias-bg .nav-link:hover:before {
+  transform: translateX(0);
+}
+
+.hero-categorias {
+  background-image: linear-gradient(to bottom, rgba(70, 70, 70, 0.4), rgba(53, 53, 53, 0.571));
+}
+
+.hero-categorias .texto-buscar p {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.heart {
   margin: auto;
-  width: 60px;
+  display: flex;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  background-image: url("https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 2900%;
+}
+
+.is_animating {
+  -webkit-animation: heart-burst 0.8s steps(28) 1;
+          animation: heart-burst 0.8s steps(28) 1;
+}
+
+.is_clicked {
+  background-position: right;
+}
+
+@-webkit-keyframes heart-burst {
+  from {
+    background-position: left;
+  }
+
+  to {
+    background-position: right;
+  }
+}
+
+@keyframes heart-burst {
+  from {
+    background-position: left;
+  }
+
+  to {
+    background-position: right;
+  }
 }
 
