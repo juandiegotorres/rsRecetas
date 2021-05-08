@@ -1,11 +1,13 @@
 @extends('layouts.app')
 
 @section('botones')
-    @include('ui.navegacion')
+    
 @endsection
 
 @section('content')
-
+    <div class="py-3 mt-2 mb-3 col-12 justify-content-center d-flex">
+        @include('ui.navegacion')
+    </div>
     <h2 class="text-center mb-2">Recetas</h2>
     
 

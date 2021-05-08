@@ -1,7 +1,63 @@
 @extends('layouts.app')
 
+@section('categorias')
+    @include('ui.categorias')
+@endsection
+
 @section('content')
-    <article class="contenido-receta">
+    <div class="container bg-white redondeado shadow py-4 contenido-receta">
+        <h1 class="text-center mb-4">{{$receta->titulo}}</h1>
+        
+        {{-- <div class=" mt-3 mb-4"> --}}
+            <img src="/storage/{{$receta->imagen}}" alt="" class="img-receta rounded shadow">
+        {{-- </div> --}}
+        <div class="row info-receta">
+            <div class="receta-meta mt-2 pt-3">
+                <p>
+                    <span class="font-weight-bold text-primary">Escrito en:</span>
+                    {{$receta->categoria->nombre}}
+                </p>
+                
+                <p>
+                    <span class="font-weight-bold text-primary">Autor:</span>
+                    {{$receta->autor->name}}
+                </p>
+                <p>
+                    <span class="font-weight-bold text-primary">Fecha:</span>
+                    @php
+                        $fecha = $receta->created_at
+                    @endphp
+                    <fecha-receta fecha ="{{$fecha}}"></fecha-receta>
+                </p>
+
+                <div class="ingedientes pt-2">
+                    <h2 class="my-3 text-primary subtitulo-receta">Ingredientes</h2>
+                    {{-- <div class="biografia redondeado p-3"> --}}
+                        {!! $receta->ingredientes !!}    
+                    {{-- </div> --}}
+                </div>
+                <div class="preparacion">
+                    <h2 class="my-3 text-primary subtitulo-receta">Preparación</h2>
+                    {{-- <div class="biografia redondeado p-3"> --}}
+                        {!! $receta->preparacion !!}    
+                    {{-- </div> --}}
+                    
+                </div>
+            </div>
+            <div class="m-auto">
+                <like-button
+                    receta-id="{{ $receta->id }}"
+                    like = "{{$like}}"
+                    likes = "{{$likes}}"
+                ></like-button>
+            </div>
+                
+        </div>
+
+  
+
+
+    {{-- <article class="contenido-receta">
         <h1 class="text-center mb-4">{{$receta->titulo}}</h1>
         
         <div class="imagen-receta">
@@ -41,12 +97,9 @@
                 like = "{{$like}}"
                 likes = "{{$likes}}"
             ></like-button>
-            {{-- @if($likes>1)
-                <h4 class="text-center">A {{$likes}} personas les gusta esta receta</h4>
-            @else
-                <h4 class="text-center">A {{$likes}} persona le gusta esta receta</h4>
-            @endif --}}
-            
-    </article>
+           
+    </article> --}}
+
+        
 
 @endsection

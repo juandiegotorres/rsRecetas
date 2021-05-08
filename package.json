@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "composer": "^4.1.0",
         "moment": "^2.29.1",
         "owl.carousel": "^2.3.4",
         "vue-sweetalert2": "^4.3.1"

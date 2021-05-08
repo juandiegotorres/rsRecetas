@@ -111,19 +111,71 @@ trix-editor {
 
 .hero-categorias {
     background-image: linear-gradient(
-        to bottom,
-        rgba(70, 70, 70, 0.4),
-        rgba(53, 53, 53, 0.571)
-    );
-    // url("../images/bgimagen.jpg");
-    // height: 30rem;
-    // background-size: cover;
-    // background-position: top center;
+            to bottom,
+            rgba(70, 70, 70, 0.4),
+            rgba(53, 53, 53, 0.571)
+        ),
+        url("../images/bgsearch.jpg");
+    height: 25rem;
+    background-size: cover;
+    background-position: top center;
     .texto-buscar {
         p {
             font-size: 1.4rem;
             color: #fff;
         }
+    }
+}
+
+.biografia {
+    background: rgba(214, 214, 214, 0.4);
+    padding: 3;
+    min-height: 16rem;
+}
+
+// .contenido-receta {
+//     // border-radius: 1rem;
+// }
+.img-receta {
+    display: flex;
+    margin: auto;
+    max-width: 73%;
+    max-height: 73%;
+
+    // max-width: 50rem;
+    // max-height: 27.5rem;
+}
+@media (max-width: 600px) {
+    .img-receta {
+        display: flex;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+
+        // max-width: 50rem;
+        // max-height: 27.5rem;
+    }
+}
+.receta-meta p {
+    font-size: 12px;
+    font-weight: bold;
+}
+.info-receta {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+@media (max-width: 600px) {
+    .info-receta {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+.redondeado {
+    border-radius: 0.75rem;
+}
+@media (max-width: 600px) {
+    .subtitulo-receta {
+        text-align: center !important;
     }
 }
 

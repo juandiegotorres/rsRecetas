@@ -5,11 +5,36 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
 @endsection
 
+@section('categorias')
+    @include('ui.categorias')
+@endsection
+
+@section('hero')
+    <div class="hero-categorias">
+        <form action="{{ route('buscar.show') }}" class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-md-4 texto-buscar">
+                    <p class="display-4">
+                    Encuentra una receta para tu próxima comida
+                </p>
+                <input 
+                    type="search"
+                    class="form-control"
+                    name="buscar"
+                    placeholder="Buscar Receta"
+                />
+                </div>
+            </div>
+        </form>
+    </div>
+@endsection
+
+
+
+
+
 @section('content')
-    
-    
-   
-   
+  
     <div class="container nuevas-recetas"> 
         <div class="titulo-container">
             <h2 class="titulo-categoria text-uppercase mt-5 mb-4">Últimas recetas</h2>

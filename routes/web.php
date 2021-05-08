@@ -23,6 +23,14 @@ Route::get('/recetas/{receta}/edit', 'RecetaController@edit')->name('recetas.edi
 Route::put('/recetas/{receta}', 'RecetaController@update')->name('recetas.update');
 Route::delete('/recetas/{receta}', 'RecetaController@destroy')->name('recetas.destroy');
 
+//Buscador de recetas 
+Route::get('/buscar', 'RecetaController@search')->name('buscar.show');
+
+
+//RECETAS POR CATEGORIA
+Route::get('/categoria/{categoriaReceta}', 'CategoriasController@show')->name('categorias.show');
+
+
 // Route::resource('recetas', 'RecetaController');
 
 //PERFILES USUARIO
