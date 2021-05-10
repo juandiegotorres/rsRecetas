@@ -4203,6 +4203,10 @@ input[type=button].btn-block {
   content: "Browse";
 }
 
+.custom-file-input:lang(es) ~ .custom-file-label::after {
+  content: "Seleccionar";
+}
+
 .custom-file-input ~ .custom-file-label[data-browse]::after {
   content: attr(data-browse);
 }
@@ -10992,14 +10996,28 @@ trix-editor {
   color: #fff;
 }
 
-.titulo-categoria {
-  font-family: "Montserrat", sans-serif;
-  color: #333;
-  font-size: 1.8rem;
-  border-bottom: 3px solid #ed4646 !important;
-  display: inline-block;
-  padding-bottom: 0.5rem;
-  padding-right: 2rem;
+@media (min-width: 600px) {
+  .titulo-categoria {
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #ed4646 !important;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .titulo-categoria {
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #ed4646 !important;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    text-align: center !important;
+  }
 }
 
 .btn-receta,
@@ -11103,8 +11121,8 @@ trix-editor {
 }
 
 .info-receta {
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 @media (max-width: 600px) {
@@ -11122,6 +11140,25 @@ trix-editor {
   .subtitulo-receta {
     text-align: center !important;
   }
+}
+
+.avatar-pic {
+  width: 150px;
+}
+
+.icono {
+  display: block;
+  margin: auto;
+  width: 50px;
+}
+
+.btn-seleccionar {
+  background-color: #3490dc;
+}
+
+.logo {
+  width: 11.813em;
+  height: 4.5rem;
 }
 
 .heart {

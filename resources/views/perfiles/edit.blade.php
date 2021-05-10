@@ -9,6 +9,15 @@
 @endsection
 
 @section('content')
+    
+    <div class="py-3 mt-2 mb-3 col-12 justify-content-center d-flex">
+       <a href="{{ route('recetas.index') }}" class="btn btn-outline-primary mr-2 text-uppercase font-weight-bold">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
+        </svg>
+            Volver
+        </a>
+    </div>
 
    <h1 class="text-center">Editar mi perfil</h1>
     <div class="row justify-content-center mt-5">
@@ -67,7 +76,7 @@
                 </div>
 
                 <div class="form-group mt-3">
-                    <label for="imagen">Tu imagen</label>
+                  <label for="imagen">Tu imagen</label>
                     <input 
                         id="imagen"
                         type="file"
@@ -89,6 +98,8 @@
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary" value="Actualizar perfil">
                 </div>
+                </div>
+
             </form>
         </div>
     </div>
@@ -98,4 +109,13 @@
 
 @section('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.js" integrity="sha512-wEfICgx3CX6pCmTy6go+PmYVKDdi4KHhKKz5Xx/boKOZOtG7+rrm2fP7RUR2o4m/EbPdwbKWnP05dvj4uzoclA==" crossorigin="anonymous" defer></script>
+
+<script>
+  $('#imagen').on('change',function(){
+    //get the file name
+    var fileName = $(this).val();
+    //replace the "Choose a file" label
+    $(this).next('.custom-file-label').html(fileName);
+  })      
+</script>
 @endsection

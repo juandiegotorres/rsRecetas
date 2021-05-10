@@ -20,7 +20,7 @@ class RecetaController extends Controller
     public function index()
     {
         $usuario = auth()->user()->id;
-        $recetas = Receta::where('user_id', $usuario)->paginate(2);
+        $recetas = Receta::where('user_id', $usuario)->paginate(10);
         $likes = auth()->user()->meGusta;
         //$recetas = auth()->user()->recetas;
         return view("recetas.index")

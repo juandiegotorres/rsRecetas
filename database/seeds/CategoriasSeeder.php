@@ -13,12 +13,12 @@ class CategoriasSeeder extends Seeder
     public function run()
     {
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Comida mexicana',
+            'nombre' => 'Carnes',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Comida argentina',
+            'nombre' => 'Verduras',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
@@ -28,25 +28,24 @@ class CategoriasSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Pastas',
+            'nombre' => 'Pescados y mariscos',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Pizzas',
+            'nombre' => 'Ensaladas',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Empanadas',
+            'nombre' => 'Salsas',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('categoria_recetas')->insert([
-            'nombre' => 'Sandwiches',
+            'nombre' => 'Postres',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
-
     }
 }

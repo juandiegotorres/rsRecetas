@@ -8,12 +8,11 @@
     <div class="py-3 mt-2 mb-3 col-12 justify-content-center d-flex">
         @include('ui.navegacion')
     </div>
-    <h2 class="text-center mb-2">Recetas</h2>
     
-
-    <div class="col-md-10 mx-auto bg-white p-3">
-         <table class="table">
-             <thead class="bg-primary text-light" >
+    <div class="col-md-10 mx-auto bg-white p-3 redondeado shadow">
+        <h2 class="text-center mb-4">Tus recetas</h2>
+        <table class="table">
+             <thead class="bg-primary text-light pt-4" >
                 <tr>
                     <th scole="col">Titulo</th>
                     <th scole="col">Categoría</th>
@@ -56,13 +55,13 @@
             {{$recetas->links()}}
          </div>
          @if(count($likes) > 0)
-         <h2 class="text-center my-5">Recetas que te gustan</h2>
+         <h2 class="text-center my-3">Recetas que te gustan</h2>
          <div class="col-md-10 mx-auto bg-white p-3">
              <ul class="list-group">
                  @foreach ($likes as $like)
                      <li class="list-group-item d-flex justify-content-between align-items-center">
-                         <p>{{$like->titulo}}</p>
-                         <a class="btn btn-outline-success text-uppercase font-weight-bold" href="{{route('recetas.show', ['receta' => $like->id])}}">Ver</a>
+                        <span class="align-middle">{{$like->titulo}}</span>
+                        <a class="btn btn-outline-success text-uppercase font-weight-bold" href="{{route('recetas.show', ['receta' => $like->id])}}">Ver</a> 
                      </li>
                  @endforeach
              </ul>

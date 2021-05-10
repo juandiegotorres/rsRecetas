@@ -1,13 +1,17 @@
 // Body
 $body-bg: #f8fafc;
-
+$custom-file-text: (
+    en: "Browse",
+    es: "Seleccionar"
+);
 // Typography
-$font-family-sans-serif: 'Manrope', sans-serif;
-$parrafos-font-family: 'Open Sans', sans-serif;
+$font-family-sans-serif: "Manrope", sans-serif;
+$parrafos-font-family: "Open Sans", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
+//#3490dc
 $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;

@@ -79532,7 +79532,19 @@ jQuery(document).ready(function () {
       }
     }
   });
-});
+}); // jQuery(document).ready(function() { 
+//   $('#customFileLang').on('change',function(){
+//     //get the file name
+//     var fileName = $(this).val();
+//     //replace the "Choose a file" label
+//     $(this).next('.custom-file-label').html(fileName);
+// })
+// $('#inputGroupFile02').on('change',function(){
+//                 //get the file name
+//                 var fileName = $(this).val();
+//                 //replace the "Choose a file" label
+//                 $(this).next('.custom-file-label').html(fileName);
+//             })
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
