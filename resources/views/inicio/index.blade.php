@@ -15,7 +15,7 @@
             <div class="row h-100 align-items-center">
                 <div class="col-md-4 texto-buscar">
                     <p class="display-4">
-                    Encuentra una receta para tu próxima comida
+                    Encuentra una receta para tu     próxima comida
                 </p>
                 <input 
                     type="search"

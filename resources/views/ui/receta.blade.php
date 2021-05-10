@@ -22,7 +22,7 @@
             </p>
             {{-- <p>{{ Str::words (strip_tags($receta->preparacion) , 15) }}</p> --}}
             <a href="{{ route('recetas.show', ['receta' => $receta->id])}}" 
-                class="btn btn-primary d-block btn-receta">Ver receta</a>
+                class="btn btn-primary d-block font-weight-bold text-uppercase">Ver receta</a>
         </div>
     </div>
 </div>
